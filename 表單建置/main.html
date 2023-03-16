@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>表單建置練習</title>
+    </head>
+    <body>
+        <h1>JWW 的表單</h1>
+        <form>
+            <fieldset>
+                <legend>個人資料</legend>
+                <!-- 一般文字 -->
+                <div>
+                    <label>帳號</label>
+                    <input type="text" name="user_name" required>
+                </div>
+                <br/>
+                <!-- 隱藏文字 -->
+                <div>
+                    <label>密碼</label>
+                    <input type="password" name="user_password" required>
+                </div>
+                <br/>
+                <!-- 電子信箱 -->
+                <div>
+                    <label>電子信箱</label>
+                    <input type="email" name="user_email" required>
+                </div>
+                <br/>
+                <!-- 單選題 -->
+                <div>
+                    <label>性別</label>
+                    <input type="radio" name="gender" id="male" value="boy">
+                    <label for="male">男性</label>
+                    <input type="radio" name="gender" id="female" value="girl">
+                    <label for="female">女性</label>
+                    <input type="radio" name="gender" id="other_gender" value="other">
+                    <label for="other_gender">其他</label>
+                </div>
+                <br/>
+                <!-- 日期 -->
+                <div>
+                    <label>出生日期</label>
+                    <input type="date" name="user_birth">
+                </div>
+                <br/>
+                <!-- 下拉式選單 -->
+                <div>
+                    <label>職業</label>
+                    <select name="job">
+                        <option value="school">求學中</option>
+                        <option value="have_job">已就業</option>
+                        <option value="no_job">待業中</option>
+                    </select>
+                </div>
+                <br/>
+                <!-- 複選題 -->
+                <div>
+                    <label>已學習技能</label>
+                    <input type="checkbox" id="html" name="skill[]" value="html_skill">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="css" name="skill[]" value="css_skill">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="js" name="skill[]" value="js_skill">
+                    <label for="js">JavaScript</label>
+                </div>
+                <br/>
+                <!-- 多行文字 -->
+                <div>
+                    <label>還有什麼想說的嗎？</label><br>
+                    <textarea name="notes"></textarea>
+                </div>
+            </fieldset>
+            <button type="reset">清除</button>
+            <button type="submit">送出</button>
+        </form>
+    </body>
+</html>
