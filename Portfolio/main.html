@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>My Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <!-- hero section start -->
+        <div class="hero">
+            <div class="navbar">
+                <img src="images/icon.png" class="logo">
+                <div class="logo_word"><span>J</span>WW <span>p</span>ortfolio</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#about_page">ABOUT</a></li>
+                        <li><a href="#service_page">SERVICE</a></li>
+                        <li><a href="#contact_page">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="select_icon"><img src="images/list.png"></div>
+            </div>
+            <div class="select_menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#about_page">ABOUT</a></li>
+                    <li><a href="#service_page">SERVICE</a></li>
+                    <li><a href="#contact_page">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3>Hello, My name is</h3>
+                <h1>Jian-Wei <span>Wu</span></h1>
+                <h2>I'm a Front-End Beginner</h2>
+            </div>
+        </div>
+        <!-- hero section end -->
+
+        <!-- about section start -->
+        <section class="about" id="about_page">
+            <div class="main">
+                <div class="about_img"><img src="images/img_about.png"></div>
+                <div class="about_text">
+                    <h2>About Me</h2>
+                    <div class="about_text_content">
+                        <p>My name is Jian-Wei Wu. You can just call me by JWW or my English name, Wisly.</p>
+                        <br>
+                        <p>I graduated from National Sun Yat-sen University with a Computer Science and Engineering college degree in Taiwan.</p>
+                        <br>
+                        <p>Although I suffer from rare disease SMA (Spinal Muscular Atrophy), I still want to contribute to the society as a Front-End Developer.</p>
+                        <br>
+                        <p>This is my goal to fulfill my career and my life!!!</p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about section end -->
+
+        <!-- service section start -->
+        <section class="service" id="service_page">
+            <h2>What can I do for you?</h2>
+            <div class="skill">
+                <div class="skill_block">
+                    <img src="images/coding.png">
+                    <div class="skill_content">
+                        <h3>Web Development</h3>
+                        <p>Help you build a static website like personal portfolio, brochure website, one-off landing page, and so on.</p>
+                    </div>
+                </div>
+                <div class="skill_block">
+                    <img src="images/discord.png">
+                    <div class="skill_content">
+                        <h3>Discord Server Management</h3>
+                        <p>I can assist you creating your community by my experience with managing discord servers.</p>
+                    </div>
+                </div>
+                <div class="skill_block">
+                    <img src="images/bot.png">
+                    <div class="skill_content">
+                        <h3>Bot Build</h3>
+                        <p>Some application like LINE and Discord have many different bots for multiple usage. If you want to make a your own one, I can teach you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- service section end -->
+
+        <!-- contact section start -->
+        <section class="contact" id="contact_page">
+            <h2><span>C</span>ONTACT <span>I</span>NFO</h2>
+            <div  class="info">
+                <div onclick="copyPhoneNumber()" class="info_block">
+                    <img src="images/phone-call.png">
+                    <p>+886 907226717</p>
+                </div>
+                <div onclick="copyEmail()" class="info_block">
+                    <img src="images/email.png">
+                    <p>jianwei890510@gmail.com</p>
+                </div>
+                <div onclick="copyDiscordID()" class="info_block">
+                    <img src="images/discord2.png">
+                    <p>JWW#8546</p>
+                </div>
+            </div>
+        </section>
+        <!-- contact section end -->
+
+        <!-- footer start -->
+        <footer>
+            <div class="footer_container">
+                <div class="sns">
+                    <a href="https://www.facebook.com/wisly.wu/"><img src="images/facebook.png"></a>
+                    <a href="https://www.instagram.com/jianwei0510/"><img src="images/instagram.png"></a>
+                    <a href="https://twitter.com/jianwei0510"><img src="images/twitter.png"></a>
+                </div>
+                <h2>Copyright © 2023 Jian-Wei Wu. All rights reserved.</h2>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        <script>
+            const selectBtn = document.querySelector(".select_icon")
+            const selectBtnIcon = document.querySelector(".select_icon img")
+            const selectMenu = document.querySelector(".select_menu")
+
+            selectBtn.onclick = function () {
+                selectMenu.classList.toggle("open")
+                const isOpen = selectMenu.classList.contains("open")
+
+                selectBtnIcon.src = isOpen? "images/close.png" : "images/list.png"
+
+            }
+
+            function copyPhoneNumber() {
+                navigator.clipboard
+                    .writeText("+886 907226717")
+                    .then(() => {
+                        alert("已複製到剪貼簿");
+                    })
+                    .catch(() => {
+                        alert("複製失敗");
+                    });
+            }
+
+            function copyEmail() {
+                navigator.clipboard
+                    .writeText("jianwei890510@gmail.com")
+                    .then(() => {
+                        alert("已複製到剪貼簿");
+                    })
+                    .catch(() => {
+                        alert("複製失敗");
+                    });
+            }
+
+            function copyDiscordID() {
+                navigator.clipboard
+                    .writeText("JWW#8546")
+                    .then(() => {
+                        alert("已複製到剪貼簿");
+                    })
+                    .catch(() => {
+                        alert("複製失敗");
+                    });
+            }
+        </script>
+
+    </body>
+</html>
